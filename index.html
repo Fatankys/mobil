@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilku</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .qris-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qris-container img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobilku</h1>
+        <nav>
+            <ul>
+                <li><a href="#mobil">Daftar Mobil</a></li>
+                <li><a href="#pembayaran">Pembayaran</a></li>
+                <li><a href="https://auto2000.co.id/mobil-baru-toyota/p/supra">info lebih detail</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mobil">
+        <h2>Daftar Mobil</h2>
+        <table>
+            <tr>
+                <th>Foto</th>
+                <th>Nama Mobil</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+            </tr>
+            <tr>
+                <td><img src="png/toyota suppra jadul.jpg" alt="Toyota Supra jadul" width="240" height="180"></td>
+                <td>toyota suppra jadul</td>
+                <td>Rp 1.150.000.000</td>
+                <td>Mobil sport klasik yang legendaris, menggabungkan kecepatan, gaya vintage, 
+                    dan sejarah otomotif yang kaya.</td>
+            </tr>
+            <tr>
+                <td><img src="png/toyota Gtr.jpg" alt="Toyota GTR" width="240" height="180"></td>
+                <td>toyota Gtr</td>
+                <td>Rp 1.200.000.000</td>
+                <td>SUV premium dengan desain modern, kenyamanan kelas atas, 
+                    dan performa yang mengagumkan di segala medan.</td>
+            </tr>
+            <tr>
+                <td><img src="png/Toyota Supra 2020.jpg" alt="Toyota Supra 2020" width="240" height="180"></td>
+                <td>toyota supra 2020</td>
+                <td>Rp 1.500.000.000</td>
+                <td>Perpaduan sempurna antara desain futuristik dan teknologi terkini, 
+                    memberikan pengalaman berkendara yang memukau..</td>
+            </tr>
+            <tr>
+                <td><img src="png/gtr supra MK4.jpg" alt="GTR Supra MK4" width="240" height="180"></td>
+                <td>gtr supra MK4</td>
+                <td>Rp 2.100.000.000</td>
+                <td>Sebuah ikon otomotif yang menawarkan performa luar biasa, 
+                    gaya agresif, dan kenyamanan berkendara terbaik.</td>
+            </tr>
+            <tr>
+                <td><img src="png/Supra mk5.jpg" alt="Toyota Supra MK5" width="240" height="180"></td>
+                <td>toyota supra MK5</td>
+                <td>Rp 3.050.000.000</td>
+                <td>Generasi terbaru Deskripsi Supra, menonjolkan kecepatan supercar, desain elegan, dan fitur inovatif yang memanjakan pengendara..</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="pembayaran">
+        <div class="container">
+            <h2>Pesan Sekarang</h2>
+            <input type="text" id="nama" placeholder="Nama Anda" required>
+            <input type="text" id="telepon" placeholder="Nomor Telepon Anda" required>
+            <select id="mobil">
+                <option value="toyota suppra ">toyota suppra - Rp 1.150.000.000</option>
+                <option value="toyota Gtr ">toyota Gtr - Rp 1.200.000.000</option>
+                <option value="toyota supra 2020 ">toyota supra 2020 - Rp 1.500.000.000</option>
+                <option value="gtr supra MK4 ">gtr supra MK4 - Rp 2.100.000.000</option>
+                <option value="toyota supra MK5 ">toyota supra MK5 - Rp 3.050.000.000</option>
+            </select>
+            <input type="number" id="jumlah" placeholder="Jumlah" required>
+            <button type="button" onclick="tampilkanQRIS()">Pesan</button>
+        </div>
+
+        <div class="qris-container" id="qris-container">
+            <p><strong>Mohon untuk membayar lewat QRIS</strong></p>
+            <img src="png/barcode dana.jpg" alt="QRIS Pembayaran">
+        </div>
+    </section>
+
+    <footer>
+        <p>© Mobilku 2025</p>
+    </footer>
+
+    <script>
+        function tampilkanQRIS() {
+            // Tampilkan pesan dan gambar QRIS
+            const qrisContainer = document.getElementById('qris-container');
+            qrisContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
